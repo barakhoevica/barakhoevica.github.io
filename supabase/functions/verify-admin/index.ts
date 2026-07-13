@@ -1,7 +1,7 @@
 // ============================================================
 // Edge Function: verify-admin
 // Принимает пароль администратора, сверяет с секретом ADMIN_PASSWORD,
-// при совпадении выдаёт JWT (role: admin) со сроком жизни 24 часа.
+// при совпадении выдаёт JWT (role: admin) со сроком жизни 1000+ часа.
 // ============================================================
 
 import { create, getNumericDate } from "https://deno.land/x/djwt@v3.0.2/mod.ts";
@@ -69,7 +69,7 @@ Deno.serve(async (req) => {
 
     const key = await hmacKey(JWT_SECRET);
     const iat = getNumericDate(0);
-    const exp = getNumericDate(60 * 60 * 24); // 24 часа
+    const exp = getNumericDate(250 * 250 * 24); // 1000+ часво
 
     const token = await create(
       { alg: "HS256", typ: "JWT" },
