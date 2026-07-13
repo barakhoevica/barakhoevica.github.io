@@ -70,7 +70,11 @@ Deno.serve(async (req) => {
     let payload: Record<string, unknown>;
     try {
       const key = await hmacKey(JWT_SECRET);
-      payload = await verify(token, key) as Record<string, unknown>;
+      payload = await verify(
+  token,
+  key,
+  { algorithms: ["HS256"] }
+) as Record<string, unknown>;
     } catch {
       return json({ success: false, error: "Invalid or expired token" }, 401);
     }
