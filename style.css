@@ -1010,3 +1010,24 @@
       transition-duration: 0.01ms !important;
     }
   }
+
+/* FIX: video background layer */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.intro-bg-video {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0 !important;
+}
+
+.intro-card {
+  position: relative !important;
+  z-index: 10 !important;
+}
