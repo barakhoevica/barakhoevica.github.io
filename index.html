@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>BioSina — Продукция Исы Барахоева</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1B3324">
+<meta name="background-color" content="#0B0B0C">
+
+<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16.png">
+<link rel="shortcut icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BioSina">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="intro-overlay" id="introOverlay">
+  <video class="intro-bg-video" id="introBgVideo" autoplay muted loop playsinline webkit-playsinline poster="videos/intro-bg-poster.jpg">
+    <source src="videos/intro-bg.mp4" type="video/mp4">
+  </video>
+  <div class="intro-card">
+    <h2 class="intro-title">Внимание!</h2>
+    <p class="intro-text strong">Читается Коран!</p>
+    <p class="intro-text">Если вы в грязном месте, или месте где распивают алкоголь — просьба закрыть сайт, пока не покинете это место.</p>
+    <p class="intro-signoff">ДжазакумЛаху Хайран</p>
+    <button class="intro-btn" id="introEnterBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+      Войти
+    </button>
+  </div>
+</div>
+
+<audio id="quranAudio" preload="none" loop>
+  <source src="quran.mp3" type="audio/mpeg">
+</audio>
+
+<div class="page blurred" id="pageContent">
+
+  <header class="reveal">
+    <div class="logo-wrap">
+      <img src="images/index_img1.jpg" alt="Иса Барахоев">
+    </div>
+    <div>
+      <p class="brand-name">Продукция Исы Барахоева</p>
+      <div class="brand-tag">Мусульманская медицина</div>
+    </div>
+  </header>
+
+  <div class="hero reveal">
+    <h1>Начитанные Кораном<br>средства для тела и души</h1>
+    <p>Масла, капсулы и свечи, приготовленные по канонам исламской медицины. Каждое средство сопровождается живым чтением Корана консультантом Исой Барахоевым.</p>
+  </div>
+
+  <div class="about-card reveal">
+    <div class="about-photo"><img src="images/index_img2.jpg" alt="Иса Барахоев"></div>
+    <div>
+      <h3>Об Исе Барахоеве</h3>
+      <p>Консультант по исламской медицине. Читает Коран над одержимыми, помогает распознать признаки сихра и присутствия джинна — в том числе «влюблённого джинна». Разработал линейку средств от стресса, тревоги, панических атак, бесплодия и других состояний, а также капсулы для выведения колдовства из желудка.</p>
+    </div>
+  </div>
+
+  <div class="section-title reveal">Продукция</div>
+  <div class="grid" id="productGrid"></div>
+
+  <div class="section-title reveal">Отзывы покупателей</div>
+  <div class="reviews-wrap reveal">
+    <div class="review-counter" id="reviewCounter">1/20</div>
+    <div class="stars-display" id="reviewStars"></div>
+    <div class="review-text" id="reviewText"></div>
+    <div class="review-nav">
+      <button class="nav-btn" id="prevReview" aria-label="Предыдущий отзыв">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="nav-btn" id="nextReview" aria-label="Следующий отзыв">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="review-more">Это лишь малая часть отзывов — их гораздо больше. Все отзывы можно посмотреть на странице товара при заказе на Wildberries.</div>
+    <button class="review-add-btn" id="openReviewFormBtn" type="button">Оставить отзыв</button>
+  </div>
+
+  <div class="section-title reveal">Мы в сети</div>
+  <div class="socials reveal">
+  <a class="social-btn insta" href="https://www.instagram.com/barakhoev_ica?igsh=MWJqczRoN2Jiczgzbw==" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+    <span class="social-text">Instagram<small>@barakhoev_ica</small></span>
+  </a>
+  <a class="social-btn insta" href="https://www.instagram.com/biosunna.ru?igsh=eGQxYWozeXhydXF2" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+    <span class="social-text">Instagram<small>@biosunna.ru</small></span>
+  </a>
+  <a class="social-btn insta" href="https://www.instagram.com/biosunna.nazran?igsh=MTA5emZxNW16MmRicw==" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+    <span class="social-text">Instagram<small>@biosunna.nazran</small></span>
+  </a>
+  <a class="social-btn insta" href="https://www.instagram.com/biosunna.grozny?igsh=MXJkZnJsZXUxZnZiNg==" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+    <span class="social-text">Instagram<small>@biosunna.grozny</small></span>
+  </a>
+  <a class="social-btn wb" href="https://www.wildberries.ru/seller/1351683" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <span class="social-text">Wildberries</span>
+  </a>
+  <a class="social-btn wa" href="https://wa.me/message/OVLRIUNYZL2QP1" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.11h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.42 5.83c0 4.55-3.71 8.24-8.26 8.24zm4.53-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.8.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+    <span class="social-text">WhatsApp<small>Продукция Исы Барахоева</small></span>
+  </a>
+</div>
+
+  <footer class="reveal">
+    <div class="disclaimer">Все товары являются биологически активными добавками к пище и не являются лекарственными средствами. Перед применением рекомендуется ознакомиться с описанием товара. Начитанные средства — духовная составляющая продукта, применяемая в дополнение к основному лечению.</div>
+    <div style="text-align:center;margin-top:20px;font-size:13px;color:#6b5b4e;opacity:0.5;cursor:default;user-select:none;" onclick="openAdmin()">
+  BioSina — Продукция Исы Барахоева
+</div>
+
+</div>
+
+<!-- product modal -->
+<div class="overlay" id="overlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- admin overlay -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-panel" id="adminPanel"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
